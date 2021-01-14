@@ -7,3 +7,11 @@ jobs:
         auth:
           username: $DOCKERHUB_USERNAME
           password: $DOCKERHUB_PASSWORD
+    steps:
+      - run: echo "PATH=$PATH"
+
+workflows:
+  version: 2.0
+  build:
+    jobs:
+      - build
