@@ -1,0 +1,9 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: iserko/circle-test-ssh:v1
+        auth:
+          username: $DOCKERHUB_USERNAME
+          password: $DOCKERHUB_PASSWORD
