@@ -5,13 +5,13 @@ jobs:
     docker:
       - image: iserko/circle-test-ssh:v1
         auth:
-          username: $DOCKERHUB_USERNAME
-          password: $DOCKERHUB_PASSWORD
+          username: $DOCKER_HUB_USERNAME
+          password: $DOCKER_HUB_PASSWORD
     steps:
       - run: echo "PATH=$PATH"
 
 workflows:
-  version: 2.0
+  version: 2
   build:
     jobs:
       - build
